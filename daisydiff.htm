@@ -1,0 +1,1005 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/diff.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<script src="js/tooltip/wz_tooltip.js" type="text/javascript"></script><script src="js/tooltip/tip_balloon.js" type="text/javascript"></script><script src="js/dojo/dojo.js" type="text/javascript"></script><script src="js/diff.js" type="text/javascript"></script><script>
+        htmlDiffInit();
+      </script>
+<div class="diff-topbar">
+<table class="diffpage-html-firstlast">
+<tr>
+<td style="text-align: left;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="first-diff" href="#removed-diff-0" next="removed-diff-0"><img class="diff-icon" src="images/diff-first.gif" title="Go to first change."></a><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#removed-diff-0">&nbsp;first</a></td><td style="text-align: center; font-size: 140%;"><a style="font-size: 100%;" class="diffpage-html-a" href="http://code.google.com/p/daisydiff/">Daisy Diff</a> compare report.<br>
+<span style="font-style: italic; font-size: 70%;">Click on the changed parts for a detailed description. Use the left and right arrow keys to walk through the modifications.</span></td><td style="text-align: right;"><a class="diffpage-html-a" onclick="scrollToEvent(event)" href="#changed-diff-6">
+              last&nbsp;</a><a class="diffpage-html-a" onclick="scrollToEvent(event)" id="last-diff" href="#changed-diff-6" previous="changed-diff-6"><img class="diff-icon" src="images/diff-last.gif" title="Go to last change."></a></td>
+</tr>
+</table>
+</div> 
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+<div class="container"> 
+<a id="logo" class="navbar-brand" href="https://test.octopus.com/"> <span class="octopus-logo"></span> Octopus Deploy </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+<div class="collapse navbar-collapse" id="main-navbar">
+<ul class="navbar-nav mr-auto">
+<li class="dropdown nav-item"> 
+<a href="#" class="dropdown-toggle nav-link " data-toggle="dropdown">Why Octopus?</a> 
+<div class="dropdown-menu"> 
+<a class="dropdown-item" href="/release-management">Release management</a> <a class="dropdown-item" href="/deployment-automation">Deployment automation</a> <a class="dropdown-item" href="/runbooks">Operations runbooks</a> 
+<div class="dropdown-divider"></div> 
+<a class="dropdown-item" href="/docs/deployment-examples">Platform support</a> <a class="dropdown-item" href="/docs/packaging-applications/build-servers">Build server integration</a> <a class="dropdown-item" href="/docs/deployment-patterns/multi-tenant-deployments">Multi-tenancy</a> <a class="dropdown-item" href="/blog/why-k8s-and-octo">Kubernetes</a> 
+<div class="dropdown-divider"></div> 
+<a class="dropdown-item" href="/azure-devops">Octopus vs. Azure DevOps</a> <a class="dropdown-item" href="/jenkins">Octopus vs. Jenkins</a> 
+</div>
+</li>
+<li class="nav-item"> 
+<a href="/whatsnew" class="nav-link">What's New <span class="chip chip-success d-none d-xl-inline-block" style="vertical-align: top">2019.10</span></a> 
+</li>
+<li class="dropdown nav-item"> 
+<a href="#" class="dropdown-toggle nav-link active" data-toggle="dropdown">Resources</a> 
+<div class="dropdown-menu"> 
+<a class="dropdown-item" href="/downloads">Downloads</a> <a class="dropdown-item" href="/docs">Documentation</a> <a class="dropdown-item" href="/support">Support</a> <a class="dropdown-item" href="/events">Events &amp; Webinars</a> <a class="dropdown-item" href="/blog">Blog</a> 
+</div>
+</li>
+<li class="nav-item "> 
+<a href="/pricing/overview" class="nav-link"> Pricing </a> 
+</li>
+</ul>
+<div class="navbar-nav ml-auto"> 
+<a href="https://test.octopus.com/signin" class="nav-link">Sign in</a> 
+</div>
+<div class="form-inline ml-lg-3 my-3 my-lg-auto"> 
+<a href="/trial" class="btn btn-success trial">Try it free</a> 
+</div>
+</div>
+</div>
+</nav> 
+<main> 
+<header class="stripe stripe-gray stripe-narrow stripe-curved d-print-none">
+<div class="container">
+<div class="row">
+<div class="col d-none d-md-block">
+<h2>Octopus Deploy Documentation</h2>
+</div>
+<div class="col-md-3 d-print-none">
+<div class="text-right"> 
+<form method="get" action="/docs/search">
+<div class="form-search search-only"> 
+<i class="search-icon"></i> <input class="form-control search-query" id="q" name="q" placeholder="Search" style="width: 100%; text-overflow: ellipsis;" type="text" value=""> 
+</div>
+</form> 
+</div>
+</div>
+</div>
+</div>
+</header> 
+<section class="stripe stripe-white docs">
+<div class="container">
+<div class="row">
+<div id="content-column" class="col d-print-flex px-md-5" style="min-width: 100px"> 
+<article id="doc-content" style="padding-bottom: 100px; min-height: 1000px;"> 
+<header>
+<h1>Deploy an ASP.NET application to <span class="diff-html-removed" id="removed-diff-0" previous="first-diff" changeId="removed-diff-0" next="added-diff-0" onclick="return tipR(constructToolTipR(this));">IIS </span><span class="diff-html-added" id="added-diff-0" previous="removed-diff-0" changeId="added-diff-0" next="removed-diff-1" onclick="return tipA(constructToolTipA(this));">Azure websites </span>using Octopus and TeamCity</h1>
+</header> 
+<style> .feature-tile { font-size: 0.917rem; line-height: 140%; width: 200px; min-width: 200px; text-decoration: none !important; } .feature-tile img { margin:0 !important; } .feature-tile .h4 { margin: 20px 0 10px 0; font-size: 15pt; font-weight: 300; color: #222 !important; } .feature-tile .h5 { margin: 10px 0 10px 0; font-weight: normal; font-size: 0.833rem; color: #999 !important; } </style> 
+<p class="lead"> In this tutorial, we will show you how to build a fully-functional continuous delivery pipeline for a simple ASP.NET web application and deploy it to <span class="diff-html-removed" id="removed-diff-1" previous="added-diff-0" changeId="removed-diff-1" next="added-diff-1" onclick="return tipR(constructToolTipR(this));">IIS</span><span class="diff-html-added" id="added-diff-1" previous="removed-diff-1" changeId="added-diff-1" next="removed-diff-2" onclick="return tipA(constructToolTipA(this));">Azure websites</span>. We will use TeamCity to build the code and run tests, and Octopus Deploy to deploy and promote releases. </p>
+<div class="h3 mt-4">Video walkthrough</div>
+<div class="wistia_responsive_padding" style="padding:75.0% 0 0 0;position:relative;">
+<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+<span class="diff-html-removed" id="removed-diff-2" previous="added-diff-1" changeId="removed-diff-2" next="added-diff-2" onclick="return tipR(constructToolTipR(this));"><img src="https://fast.wistia.com/embed/medias/wi4kx6cm8l/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span>
+<div class="wistia_embed wistia_async_4gcca87re1 videoFoam=true" style="height:100%;position:relative;width:100%">
+<div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+<span class="diff-html-added" id="added-diff-2" previous="removed-diff-2" changeId="added-diff-2" next="changed-diff-0" onclick="return tipA(constructToolTipA(this));"><img src="https://fast.wistia.com/embed/medias/4gcca87re1/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-changed" id="changed-diff-0" changes="<ul class='changelist'><li>Moved out of a <b>division</b>withclasswistia_embed<br/>wistia_async_wi4kx6cm8l videoFoam=trueandstyle<br/>height:100%;position:relative;width:100%.</li><li>Moved to a <b>division</b>withclasswistia_embed<br/>wistia_async_4gcca87re1 videoFoam=trueandstyle<br/>height:100%;position:relative;width:100%.</li></ul>" previous="added-diff-2" changeId="changed-diff-0" next="removed-diff-3" onclick="return tipC(constructToolTipC(this));"></span>
+</div>
+</div>
+</div>
+</div>
+<h2>Introduction</h2>
+<p> The application we'll deploy is called <strong>Random Quotes</strong>, it's a simple web application that randomly displays a famous quote each time the page loads. It consists of a web front end and a database that contains the quotes. We'll build a complete CI/CD pipeline with automated builds, deployments to a dev environment, and sign offs for production deployments. </p>
+<h3>Deployment Pipeline</h3>
+<p> For this tutorial, we'll assume you use <strong>Git</strong> for version controlling changes to your source code, and <strong>TeamCity</strong> to compile code and run unit tests. <strong>Octopus Deploy</strong> will take care of the deployment. Here is what the full continuous integration and delivery pipeline will look like when we are finished: </p> 
+<svg viewbox="0 0 964 500" id="diagram"> 
+<defs> 
+<style> .component-label { font-size: 1rem; fill: #1a2e3e; text-anchor: middle; } .comment { font-size: 0.917rem; fill: #999; } .environment-label { font-size: 0.833rem; fill: #1a2e3e; } .diagram-line { stroke: #1a2e3e; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; fill: none; } .when-external-package-repository, .when-builtin-package-repository { visibility: hidden; } .is-external-package-repository .when-external-package-repository { visibility: visible; } .is-builtin-package-repository .when-builtin-package-repository { visibility: visible; } </style> 
+<image id="icon-teamcity" width="64" height="64" href="/images/diagram/teamcity.png?v=1"></image> 
+<image id="icon-git" width="64" height="64" href="/images/diagram/git.png?v=1"></image> 
+<image id="icon-iis-badge" width="40" height="40" href="/images/diagram/iis.png?v=1"></image> 
+<image id="icon-artifactory" width="64" height="62" href="/images/diagram/artifactory.png?v=1"></image> 
+<image id="icon-hg" width="64" height="64" href="/images/diagram/mercurial.png?v=1"></image> 
+<image id="icon-tfvc" width="64" height="64" href="/images/diagram/visualstudio.png?v=1"></image> 
+<image id="icon-jenkins" width="64" height="64" href="/images/diagram/jenkins.png?v=1"></image> 
+<image id="icon-azure-devops" width="64" height="64" href="/images/diagram/visualstudio.png?v=1"></image> 
+<image id="icon-docker-registry" width="64" height="64" href="/images/diagram/docker.png?v=1"></image> 
+<image id="icon-bamboo" width="64" height="64" href="/images/diagram/bamboo.png?v=1"></image> 
+<image id="icon-nginx-badge" width="40" height="40" href="/images/diagram/nginx.png?v=1"></image> 
+<image id="icon-azure-website" width="64" height="64" href="/images/diagram/azurewebsites.png?v=1"></image> 
+<image id="icon-kubernetes" width="64" height="64" href="/images/diagram/kubernetes.png?v=1"></image> 
+<g id="icon-tc-feed"> 
+<use href="#icon-teamcity"></use> 
+</g> 
+<g id="icon-az-feed"> 
+<use href="#icon-azure-devops" width="64" height="64"></use> 
+</g> 
+<g id="component-web-server"> 
+<rect x="0" y="0" width="76" height="16" rx="2" ry="2" fill="#1a2e3e"></rect> 
+<rect x="0" y="20" width="76" height="16" rx="2" ry="2" fill="#1a2e3e"></rect> 
+<rect x="0" y="40" width="76" height="16" rx="2" ry="2" fill="#1a2e3e"></rect> 
+<circle cx="9" cy="8" r="2.5" fill="#62b3f1"></circle> 
+<circle cx="9" cy="28" r="2.5" fill="#62b3f1"></circle> 
+<circle cx="9" cy="48" r="2.5" fill="#62b3f1"></circle> 
+</g> 
+<g id="icon-iis"> 
+<use href="#component-web-server"></use> 
+<use transform="translate(60, 30)" href="#icon-iis-badge"></use> 
+</g> 
+<g id="icon-nginx"> 
+<use href="#component-web-server"></use> 
+<use transform="translate(60, 30)" href="#icon-nginx-badge"></use> 
+</g> 
+<g id="Component-Package"> 
+<polygon points="28.897 58.638 1.5 45.789 1.5 14.381 28.897 1.5 56.295 14.381 56.295 45.789 28.897 58.638" fill="#2f93e0" stroke="#2f93e0" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" fill-rule="evenodd"></polygon> 
+<polyline points="28.99 59.12 28.99 27.699 56.295 14.381" fill="none" stroke="#62b3f1" stroke-linecap="round" stroke-linejoin="round"></polyline> 
+<path d="M28.8974,27.55563,1.5,14.38127" fill="none" stroke="#62b3f1" stroke-linecap="round" stroke-linejoin="round"></path> 
+<path d="M16.9078,7.74689,42.64231,20.87405" fill="none"></path> 
+<polygon points="11.5 9.265 18.078 6.5 47.5 19.219 47.5 26.34 40.725 29.5 40.725 22.156 11.5 9.265" fill="#1a2e3e" fill-rule="evenodd"></polygon> 
+</g> 
+<g id="Component-CodeFile"> 
+<path d="M42.56007,12.64094,31.15488.49876,2.85474.57794A3.3114,3.3114,0,0,0,.12132,4.02758L.30983,46.75412l42.39993-.1829Z" fill="#2f93e0" fill-rule="evenodd"></path> 
+<path d="M.41712,43.13473.48486,58.48931a1.70477,1.70477,0,0,0,.27134.97226,1.37288,1.37288,0,0,0,1.046.31693l40.43749-.17444.64824-.5893-.07086-16.06293Z" fill="#ccd9ec" fill-rule="evenodd"></path> 
+<path d="M43.32557,55.51729a2.83031,2.83031,0,0,1-2.81249,2.83193l-37.2097.16234A2.83175,2.83175,0,0,1,.46462,55.70428L.236,3.30742A2.83174,2.83174,0,0,1,3.05018.47548l28.41426-.124L43.137,12.2966Z" fill="none" stroke="#ccd9ec" stroke-width="0.472"></path> 
+<path d="M42.94336,12.2185,32.651,12.26341A1.56044,1.56044,0,0,1,31.09232,10.709L31.0456,0" fill="#ccd9ec" fill-rule="evenodd"></path> 
+<polygon points="9.514 52.936 4.738 50.84 4.735 50.147 9.491 47.729 9.496 48.89 6.22 50.437 9.509 51.781 9.514 52.936" fill="#0099d9" fill-rule="evenodd"></polygon> 
+<path d="M12.88887,53.99964q-2.50765.01093-2.51805-2.75943a2.96122,2.96122,0,0,1,.673-2.10838,2.54644,2.54644,0,0,1,1.9506-.73639,3.70552,3.70552,0,0,1,1.67168.36005l-.42732,1.143q-.34511-.1388-.64438-.22678a2.05557,2.05557,0,0,0-.59479-.08584q-1.1449.005-1.1361,1.63761.00693,1.5867,1.15014,1.58171a2.56406,2.56406,0,0,0,.78135-.11735,2.80673,2.80673,0,0,0,.71951-.35858l.0055,1.26188a2.36571,2.36571,0,0,1-.7163.31775,4.0378,4.0378,0,0,1-.91487.09073" fill="#0099d9" fill-rule="evenodd"></path> 
+<path d="M16.91891,51.17321a2.28476,2.28476,0,0,0,.267,1.21142.92864.92864,0,0,0,.85288.40785.91707.91707,0,0,0,.84086-.41184,2.30507,2.30507,0,0,0,.25306-1.21709,2.24827,2.24827,0,0,0-.26531-1.20292,1.09738,1.09738,0,0,0-1.69541.00569,2.24439,2.24439,0,0,0-.25311,1.20689m3.71166-.01619a2.91911,2.91911,0,0,1-.68334,2.06761,2.497,2.497,0,0,1-1.92181.75328,2.66957,2.66957,0,0,1-1.36424-.33589,2.25249,2.25249,0,0,1-.91277-.97561,3.30884,3.30884,0,0,1-.32227-1.48668,2.90158,2.90158,0,0,1,.67661-2.06248,2.512,2.512,0,0,1,1.92693-.7431,2.68056,2.68056,0,0,1,1.36422.33248,2.24,2.24,0,0,1,.91273.96711,3.27881,3.27881,0,0,1,.32394,1.48328" fill="#0099d9" fill-rule="evenodd"></path> 
+<path d="M24.05925,52.7759a.99046.99046,0,0,0,.82263-.33182,1.93539,1.93539,0,0,0,.28051-1.11857l-.0007-.15986a2.22338,2.22338,0,0,0-.27224-1.24541.98523.98523,0,0,0-.86793-.37376.85759.85759,0,0,0-.75976.42168,2.24518,2.24518,0,0,0-.26488,1.21714,2.13074,2.13074,0,0,0,.27879,1.19606.89131.89131,0,0,0,.78358.39454M23.551,53.95329a1.73982,1.73982,0,0,1-1.48924-.7333,4.16422,4.16422,0,0,1-.00785-4.12071,1.78161,1.78161,0,0,1,1.51148-.7498,1.74984,1.74984,0,0,1,1.54858.78577l.04728-.00021a6.15646,6.15646,0,0,1-.11447-1.07773l-.00754-1.72956,1.46913-.00641.03281,7.522-1.12295.0049-.28675-.69943-.06248.00027a1.67343,1.67343,0,0,1-1.518.80424" fill="#0099d9" fill-rule="evenodd"></path> 
+<path d="M30.27547,49.36936a.92186.92186,0,0,0-.7282.3008,1.38476,1.38476,0,0,0-.29858.84484l2.05509-.009a1.23823,1.23823,0,0,0-.28738-.84228.95344.95344,0,0,0-.74093-.29439m.22589,4.55344a2.52129,2.52129,0,0,1-2.76793-2.74813,3.01134,3.01134,0,0,1,.6663-2.10325,2.39089,2.39089,0,0,1,1.861-.75131,2.35117,2.35117,0,0,1,1.77425.64531,2.4733,2.4733,0,0,1,.6428,1.79992l.00313.716-3.46175.0151a1.41684,1.41684,0,0,0,.3741.97966,1.29687,1.29687,0,0,0,.97083.34951,3.97857,3.97857,0,0,0,.91649-.106,4.5075,4.5075,0,0,0,.902-.32877l.005,1.14114a3.49661,3.49661,0,0,1-.82112.29269,5.24413,5.24413,0,0,1-1.06513.09819" fill="#0099d9" fill-rule="evenodd"></path> 
+<polygon points="33.526 51.676 36.803 50.303 33.514 48.785 33.509 47.625 38.286 50.002 38.289 50.692 33.531 52.83 33.526 51.676" fill="#0099d9" fill-rule="evenodd"></polygon> 
+</g> 
+<polyline id="Line-ArrowHead" points="1 13.953 7.056 7.946 1.679 1" class="diagram-line"></polyline> 
+</defs> 
+<g id="Continuous-Delivery-Pipeline"> 
+<g id="Option-SourceControl"> 
+<use id="Option-SourceControl-Icon" href="#icon-git" x="40" y="106"></use> 
+<text id="Option-SourceControl-Text" class="component-label" x="70" y="188">Git</text> 
+</g> 
+<g id="LineFromSourceToBuildServer"> 
+<path class="diagram-line" d="M117,137q66.31023-9,103.7175-9T275,131.9104"></path> 
+<use href="#Line-ArrowHead" transform="translate(270 123) rotate(10)"></use> 
+<g transform="translate(150,110) rotate(-20)"> 
+<use href="#Component-CodeFile"></use> 
+<text x="22" y="30" fill="#ccd9ec" font-size="14pt" text-anchor="middle" class="diagram-codefile">C#</text> 
+</g> 
+<g transform="translate(200,80) rotate(10)"> 
+<use href="#Component-CodeFile"></use> 
+<text x="22" y="30" fill="#ccd9ec" font-size="14pt" text-anchor="middle" class="diagram-codefile">C#</text> 
+</g> 
+<g transform="translate(200,120) rotate(20)"> 
+<use href="#Component-CodeFile"></use> 
+<text x="22" y="30" fill="#ccd9ec" font-size="14pt" text-anchor="middle" class="diagram-codefile">C#</text> 
+</g> 
+</g> 
+<g id="Option-BuildServer"> 
+<use id="Option-BuildServer-Icon" href="#Icon-TeamCity" x="296" y="100"></use> 
+<text id="Option-BuildServer-Text" class="component-label" x="324" y="188">TeamCity</text> 
+</g> 
+<g id="LineFromBuildServerToPackageRepository" class="when-external-package-repository"> 
+<path class="diagram-line" d="M320,207l1,137"></path> 
+<use href="#Line-ArrowHead" transform="translate(329, 339) rotate(90)"></use> 
+<use href="#Component-Package" x="291" y="240"></use> 
+</g> 
+<g id="Options-PackageRepositories" class="when-external-package-repository"> 
+<use id="Option-PackageRepository-Icon" href="#Icon-Artifactory" x="290" y="358" class="when-external-package-repository"></use> 
+<text id="Option-PackageRepository-Text" class="component-label when-external-package-repository" x="324" y="440">Artifactory</text> 
+</g> 
+<g id="LineFromArtifactsToOctopus" class="when-external-package-repository"> 
+<path d="M367,397.2226q225.33014,17,263.30151-3.6875T633.04944,307" class="diagram-line when-external-package-repository"></path> 
+<use href="#Line-ArrowHead" transform="translate(628,315) rotate(-120)"></use> 
+<use id="PackageForRelease1" href="#Component-Package" x="410" y="370"></use> 
+<use id="PackageForRelease2" href="#Component-Package" x="480" y="380"></use> 
+<use id="PackageForRelease3" href="#Component-Package" x="550" y="370"></use> 
+</g> 
+<g id="LineFromBuildServerToOctopus"> 
+<path d="M374,134.15964A449.55959,449.55959,0,0,1,525,172" class="diagram-line"></path> 
+<use href="#Line-ArrowHead" transform="translate(520,163) rotate(10)"></use> 
+<text class="comment" transform="translate(405, 121) rotate(10)">create release</text> 
+<use href="#Component-Package" x="420" y="135" class="when-builtin-package-repository"></use> 
+</g> 
+<g id="Environments"> 
+<g> 
+<path id="LineFromReleaseToDev" d="M740.18216,197.74492q37.81778-56.2448,107.83172-35.74483" class="diagram-line"></path> 
+<use href="#Line-ArrowHead" transform="translate(845,153) rotate(15)"></use> 
+<use href="#Component-Package" transform="translate(790, 140) scale(0.7)"></use> 
+<path id="LineFromReleaseToTest" d="M757,250q23.7746,5,55.88068,5H850" class="diagram-line"></path> 
+<use href="#Line-ArrowHead" transform="translate(842,248) rotate(-10)"></use> 
+<path id="LineFromReleaseToProduction" d="M741.8052,296.31836q25.2585,55.94561,104.01258,52.40443" class="diagram-line"></path> 
+<use href="#Line-ArrowHead" transform="translate(840,342) rotate(-10)"></use> 
+</g> 
+<g id="EnvironmentTargets"> 
+<text x="863" y="122" class="environment-label" text-anchor="start">DEV</text> 
+<use id="Option-Destination-Icon1" href="#icon-iis" x="862" y="133"></use> 
+<text x="863" y="220" class="environment-label" text-anchor="start">TEST</text> 
+<use id="Option-Destination-Icon2" href="#icon-iis" x="862" y="227"></use> 
+<text x="863" y="317" class="environment-label" text-anchor="start">PRODUCTION</text> 
+<use id="Option-Destination-Icon3" href="#icon-iis" x="862" y="324"></use> 
+</g> 
+</g> 
+<path id="Octopus" d="M546.20911,196.28394c-3.33991-9.59583-7.9867-17.88312-8.56757-28.49671a64.1798,64.1798,0,0,1,3.92078-26.17041c12.34314-33.00381,48.79162-48.56067,81.75506-38.67407,30.49475,9.15964,51.55066,44.6351,38.91712,75.60345-7.26068,17.88312-10.60059,31.69529,5.66333,45.50745C672.25421,227.83383,683,233.50409,683,240.19208c0,8.72348-17.13513-1.89008-19.16815-3.344,2.17822,3.78019,23.815,26.31583,10.01971,27.91513-12.63354,1.45389-23.81494-16.28384-31.51129-23.84417-12.77875-12.79444-10.60052,15.41147-10.60052,21.37252-.14521,9.15964-6.53461,27.91511-18.29688,15.70224-9.58411-10.032-5.95373-26.025-12.63354-37.22015-7.40589-12.21286-19.60382,12.21286-22.65326,16.72-3.33991,4.9433-20.4751,29.22364-27.30011,16.28382-5.51813-10.46817,3.3399-26.8974,7.55108-36.34781-1.59735,3.48938-12.77874,8.57806-15.97345,10.17737-7.40588,3.78018-14.81176,5.96105-23.23413,5.37948-16.84472-1.16312-3.63031-10.32278,3.33991-14.82989C536.18939,229.28775,552.30811,214.16705,546.20911,196.28394Z" fill="#2f93e0" fill-rule="evenodd"></path> 
+<g id="Artifact-Release"> 
+<g> 
+<polygon points="775.897 194 707.103 194 689 223.517 689 301 794 301 794 223.517 775.897 194" fill="#1a2e3e"></polygon> 
+<polygon points="708.009 194 690.221 223.062 793.39 223.062 775.602 194 708.009 194" fill="#20394c"></polygon> 
+<path d="M782.43221,209.15833a.97156.97156,0,0,0,.88983-1.03637V206.628a.90019.90019,0,1,0-1.77966,0V208.122A.97156.97156,0,0,0,782.43221,209.15833Z" fill="#2f93e0"></path> 
+<path d="M782.43221,215.4a.97156.97156,0,0,0,.88983-1.03637V212.8697a.90019.90019,0,1,0-1.77966,0v1.49393A.97156.97156,0,0,0,782.43221,215.4Z" fill="#2f93e0"></path> 
+<path d="M785.2461,210.94167H786.737a.9015.9015,0,1,0,0-1.78334H785.2461a.9015.9015,0,1,0,0,1.78334Z" fill="#2f93e0"></path> 
+<path d="M778.12749,210.94167h1.49079a.9015.9015,0,1,0,0-1.78334h-1.49079a.9015.9015,0,1,0,0,1.78334Z" fill="#2f93e0"></path> 
+<path d="M723.25848,202.91667a3.12084,3.12084,0,1,0,3.1144,3.12083A3.12116,3.12116,0,0,0,723.25848,202.91667Zm0,4.16111a1.04028,1.04028,0,1,1,1.03813-1.04028A1.04039,1.04039,0,0,1,723.25848,207.07778Z" fill="#2f93e0"></path> 
+</g> 
+<g> 
+<use href="#Component-Package" transform="translate(700, 200) scale(0.7)"></use> 
+<use href="#Component-Package" transform="translate(717, 210) scale(0.7)"></use> 
+<use href="#Component-Package" transform="translate(750, 200) scale(0.7)"></use> 
+</g> 
+<rect x="690" y="226" width="104" height="50" fill="#1a2e3e"></rect> 
+<text transform="translate(740, 266)" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">Release 1.1</text> 
+</g> 
+</g> 
+</svg> 
+<div id="tutorial-link" style="display: none;">
+<h5 class="mt-2">End-to-end tutorial</h5>
+<div style="position: relative;">
+<div class="tutorial-link-panel state-found">
+<p class="tutorial-title"> Deploy an ASP.NET application to <span class="diff-html-removed" id="removed-diff-3" previous="changed-diff-0" changeId="removed-diff-3" next="added-diff-3" onclick="return tipR(constructToolTipR(this));">IIS </span><span class="diff-html-added" id="added-diff-3" previous="removed-diff-3" changeId="added-diff-3" next="changed-diff-1" onclick="return tipA(constructToolTipA(this));">Azure websites </span>using Octopus and TeamCity &rarr; </p>
+<span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-iis/using-octopus-onp<br/>rem-teamcity with class btn btn-lg btn-successandid<br/>tutorial-found-link.</li><li>Moved to a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-azure-website/using-o<br/>ctopus-onprem-teamcitywithclassbtnbtn-lg<br/>btn-success and id tutorial-found-link.</li></ul>" previous="added-diff-3" changeId="changed-diff-1" next="removed-diff-4" onclick="return tipC(constructToolTipC(this));"> </span><a class="btn btn-lg btn-success" id="tutorial-found-link" href="/docs/guides/deploy-aspnet-app/to-azure-website/using-octopus-onprem-teamcity"><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-iis/using-octopus-onp<br/>rem-teamcity with class btn btn-lg btn-successandid<br/>tutorial-found-link.</li><li>Moved to a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-azure-website/using-o<br/>ctopus-onprem-teamcitywithclassbtnbtn-lg<br/>btn-success and id tutorial-found-link.</li></ul>" previous="added-diff-3" changeId="changed-diff-1" next="removed-diff-4" onclick="return tipC(constructToolTipC(this));"> </span><span class="diff-html-changed" id="changed-diff-1" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-iis/using-octopus-onp<br/>rem-teamcity with class btn btn-lg btn-successandid<br/>tutorial-found-link.</li><li>Moved to a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-azure-website/using-o<br/>ctopus-onprem-teamcitywithclassbtnbtn-lg<br/>btn-success and id tutorial-found-link.</li></ul>" previous="added-diff-3" changeId="changed-diff-1" next="removed-diff-4" onclick="return tipC(constructToolTipC(this));">Read the tutorial &rarr; </span></a><span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-iis/using-octopus-onp<br/>rem-teamcity with class btn btn-lg btn-successandid<br/>tutorial-found-link.</li><li>Moved to a <b>link</b>withdestination<br/>/docs/guides/deploy-aspnet-app/to-azure-website/using-o<br/>ctopus-onprem-teamcitywithclassbtnbtn-lg<br/>btn-success and id tutorial-found-link.</li></ul>" previous="added-diff-3" changeId="changed-diff-1" next="removed-diff-4" onclick="return tipC(constructToolTipC(this));"> </span>
+</div>
+<div class="tutorial-link-panel state-not-found">
+<p class="request-tutorial-text"> We haven't written the tutorial for the combination you selected yet. </p> 
+<a class="btn btn-light" id="request-tutorial-link" style="cursor: pointer"> &#128077; Vote for this tutorial </a> 
+<p id="request-tutorial-voted" style="display: none" class="text-success"> Thanks! </p>
+</div>
+<div class="tutorial-link-panel state-generating">
+<p> Generating an end-to-end tutorial for you... </p>
+<div class="progress">
+<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+</div>
+</div>
+<p> The development team's workflow will be: </p>
+<ol class="big-numbers">
+<li>Developers commit code changes to Git.</li>
+<li> TeamCity detects the change and performs the continuous integration build. This includes resolving any dependencies and running unit tests. </li>
+<li>When the TeamCity build completes, the change will be deployed to a <strong>Dev</strong> environment.</li>
+<li> When one of your team members (perhaps a tester) wants to see what's in a particular release, they can use Octopus to manually deploy a release to the <strong>Test</strong> environment. </li>
+<li> When the team is satisfied with the quality of the release, and they are ready for it to go to Production, they can use Octopus to promote the release from the <strong>Test</strong> environment to the <strong>Production</strong> environment. </li>
+</ol>
+<p> Since Octopus is designed to be used by teams, in this tutorial we'll also set up some simple rules: </p>
+<ul>
+<li>Anyone can deploy to Dev or Test.</li>
+<li>Only specific people can deploy to Production.</li>
+<li>Production deployments also require a sign off by someone from our project stakeholders group.</li>
+<li>We'll send an email to the team after any Test or Production deployment has succeeded or failed.</li>
+</ul>
+<p> This tutorial makes use of the following tools: </p>
+<div class="d-flex d-flex align-items-stretch justify-content-center flex-wrap"> 
+<a class="feature-tile col align-self-stretch" href="https://git-scm.com/" target="_blank"> 
+<svg style="width: 64px; height: 64px;"> 
+<g> 
+<use href="#icon-git" width="64" height="64"></use> 
+</g> 
+</svg> 
+<div class="h4">Git</div>
+<div class="h5">Source Control</div>
+<p>Version control of source code</p>
+</a> <a class="feature-tile col align-self-stretch" href="https://www.jetbrains.com/teamcity/" target="_blank"> 
+<svg style="width: 64px; height: 64px;"> 
+<g> 
+<use href="#icon-teamcity" width="64" height="64"></use> 
+</g> 
+</svg> 
+<div class="h4">TeamCity</div>
+<div class="h5">Build Server</div>
+<p>Compile code, run tests</p>
+</a> <a class="feature-tile col align-self-stretch" href="https://octopus.com/" target="_blank">
+<div class="octopus-logo" style="width: 64px; height: 64px"></div>
+<div class="h4">Octopus Deploy</div>
+<div class="h5">Deployment Server</div>
+<p>Release management &amp; deployments</p>
+</a><span class="diff-html-removed" id="removed-diff-4" previous="changed-diff-1" changeId="removed-diff-4" next="added-diff-4" onclick="return tipR(constructToolTipR(this));">IIS</span><a class="feature-tile col align-self-stretch" href="https://g.octopushq.com/AppServiceDocumentation" target="_blank"> 
+<svg style="width: 64px; height: 64px;"> 
+<g> 
+<use href="#icon-azure-website" transform="scale(0.6), translate(0,20)"></use> 
+</g> 
+</svg> 
+<div class="h4">
+<span class="diff-html-added" id="added-diff-4" previous="removed-diff-4" changeId="added-diff-4" next="changed-diff-2" onclick="return tipA(constructToolTipA(this));">Azure App Service</span><span class="diff-html-changed" id="changed-diff-2" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>https://g.octopushq.com/IISHomepagewithclass<br/>feature-tile col align-self-stretch and target _blank.</li><li>Moved to a <b>link</b>withdestination<br/>https://g.octopushq.com/AppServiceDocumentationwith<br/>class feature-tile col align-self-stretchandtarget<br/>_blank.</li></ul>" previous="added-diff-4" changeId="changed-diff-2" next="added-diff-5" onclick="return tipC(constructToolTipC(this));"></span>
+</div>
+<div class="h5">
+<span class="diff-html-added" id="added-diff-5" previous="changed-diff-2" changeId="added-diff-5" next="changed-diff-3" onclick="return tipA(constructToolTipA(this));">PaaS </span><span class="diff-html-changed" id="changed-diff-3" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>https://g.octopushq.com/IISHomepagewithclass<br/>feature-tile col align-self-stretch and target _blank.</li><li>Moved to a <b>link</b>withdestination<br/>https://g.octopushq.com/AppServiceDocumentationwith<br/>class feature-tile col align-self-stretchandtarget<br/>_blank.</li></ul>" previous="added-diff-5" changeId="changed-diff-3" next="removed-diff-5" onclick="return tipC(constructToolTipC(this));">Web </span>
+</div>
+</a><span class="diff-html-removed" previous="changed-diff-3" changeId="removed-diff-5" next="changed-diff-4" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-5" previous="changed-diff-3" changeId="removed-diff-5" next="changed-diff-4" onclick="return tipR(constructToolTipR(this));">Application </span><a class="feature-tile col align-self-stretch" href="https://g.octopushq.com/AppServiceDocumentation" target="_blank">
+<div class="h5">
+<span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>https://g.octopushq.com/IISHomepagewithclass<br/>feature-tile col align-self-stretch and target _blank.</li><li>Moved to a <b>link</b>withdestination<br/>https://g.octopushq.com/AppServiceDocumentationwith<br/>class feature-tile col align-self-stretchandtarget<br/>_blank.</li></ul>" previous="removed-diff-5" changeId="changed-diff-4" next="removed-diff-6" onclick="return tipC(constructToolTipC(this));"> </span><span class="diff-html-changed" id="changed-diff-4" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>https://g.octopushq.com/IISHomepagewithclass<br/>feature-tile col align-self-stretch and target _blank.</li><li>Moved to a <b>link</b>withdestination<br/>https://g.octopushq.com/AppServiceDocumentationwith<br/>class feature-tile col align-self-stretchandtarget<br/>_blank.</li></ul>" previous="removed-diff-5" changeId="changed-diff-4" next="removed-diff-6" onclick="return tipC(constructToolTipC(this));">Server</span>
+</div>
+<p>
+<span class="diff-html-changed" changes="<ul class='changelist'><li>Moved out of a <b>link</b>withdestination<br/>https://g.octopushq.com/IISHomepagewithclass<br/>feature-tile col align-self-stretch and target _blank.</li><li>Moved to a <b>link</b>withdestination<br/>https://g.octopushq.com/AppServiceDocumentationwith<br/>class feature-tile col align-self-stretchandtarget<br/>_blank.</li></ul>" previous="removed-diff-5" changeId="changed-diff-4" next="removed-diff-6" onclick="return tipC(constructToolTipC(this));">Hosts the running web application</span>
+</p>
+</a>
+</div>
+<p> Octopus is an extremely powerful deployment automation tool, and there are numerous ways to model a development team's workflow in Octopus Deploy, but this tends to be the most common for small teams. If you're not sure how to configure Octopus, we recommend following this guide to learn the basics. You'll then know how to adjust Octopus to suit your team's workflow. </p>
+<p> This tutorial takes about an hour to complete. That sounds like a long time, but keep in mind, at the end of the tutorial, you'll have a fully-functional CI/CD environment for your entire team, and you'll be ready to deploy to production at the click of a button. It's worth the effort! </p>
+<h3> Build vs. Deployment </h3>
+<p> For any non-trivial application, you're going to deploy the software to multiple environments. For this tutorial, we're using the environments <strong>Dev</strong>, <strong>Test</strong> and <strong>Prod</strong>. This means you need to choose: do you build your application once or do you build it before each deployment? To reduce the risk of a failed production deployment, Octopus strongly encourages the practice of building once, deploying multiple times. </p>
+<p> The following activities are a <strong>build time</strong> concern, so they will happen in TeamCity after any change to code is committed to Git. </p>
+<ol>
+<li>Check out the latest changes from Git.</li>
+<li>Resolve and install any dependencies from NuGet.</li>
+<li>Compile the code.</li>
+<li>Run unit tests.</li>
+<li>Package the application by bundling all the files it needs to run into a NuGet file.</li>
+</ol>
+<p> This results in a green CI build and a file that contains the application and everything it needs to run. Any configuration files will have their default values; they won't know anything about dev vs. production settings just yet. </p>
+<p> Lastly, it's very important that we <strong>give this NuGet file a unique version number</strong>. We will produce a new NuGet file every time our CI build runs, and we don't want to accidentally deploy a previous version of the NuGet file. </p>
+<p> An example of a package that is ready to be deployed is: </p>
+<pre>RandomQuotes.1.0.0.nupkg</pre>
+<p> At this point, we have a single <i>artifact</i> that contains all the files our application needs to run, ready to be deployed. We can deploy it over and over, using the same artifact in each environment. If we deploy a bad release, we can go and find the old version of the artifact and re-deploy it. </p>
+<p> The following activities happen at <strong>deployment time</strong> by Octopus Deploy: </p>
+<ol>
+<li>Changing any configuration files to include settings appropriate for the environment, e.g., database connection strings, API keys, etc.</li>
+<li>
+<span class="diff-html-removed" id="removed-diff-6" previous="changed-diff-4" changeId="removed-diff-6" next="removed-diff-7" onclick="return tipR(constructToolTipR(this));">Uploading the artifacts to IIS.</span>
+</li>
+<li>Running tasks that need to be performed during the deployment such as database migrations or taking the application temporarily offline.</li>
+</ol>
+<h2> Prerequisites </h2>
+<p> There are a number of tools you need to install to implement a complete CI/CD workflow. These include the TeamCity and Octopus servers, some command-line tools, and <span class="diff-html-removed" id="removed-diff-7" previous="removed-diff-6" changeId="removed-diff-7" next="added-diff-6" onclick="return tipR(constructToolTipR(this));">IIS </span><span class="diff-html-added" id="added-diff-6" previous="removed-diff-7" changeId="added-diff-6" next="removed-diff-8" onclick="return tipA(constructToolTipA(this));">Azure websites </span>to host the final deployment. </p>
+<h3>Git</h3>
+<p> The source code for the sample applications is hosted on GitHub. To access the code, you need the Git client. The <a href="https://g.octopushq.com/GitGettingStarted">Git documentation</a> has instructions to download and install the Git client. </p>
+<h3>TeamCity</h3>
+<p> TeamCity offers a free tier, and can be downloaded from the <a href="https://www.jetbrains.com/teamcity/">project's website</a>. </p>
+<h3>NuGet</h3>
+<p> NuGet is used to download the dependencies of the sample application. The <a href="https://g.octopushq.com/NugetInstall">Microsoft documentation</a> has instructions on where to download the NuGet executable. NuGet can also be installed via <a href="https://g.octopushq.com/ChocolateyNuget">Chocolatey</a>. </p>
+<h3>.NET Framework Dev Pack</h3>
+<p> The .NET Dev Pack version 4.8 or above is required to compile and run the ASP.NET sample application. The Dev Pack can be downloaded from the <a href="https://g.octopushq.com/DotNetDownload">Microsoft .NET website</a>. </p>
+<h3>Build Tools for Visual Studio</h3>
+<p> The MSBuild tool is used to compile .NET applications. The Build Tools for Visual Studio can be downloaded from the <a href="https://g.octopushq.com/VisualStudioDownloads">Microsoft Visual Studio website</a>. </p>
+<p> To compile web applications, the <strong>Web development build tools</strong> option must be selected. </p> 
+<img src="/images/guides/msbuild.png"> <p> NuGet, the Build Tools for Visual Studio and the .NET Framework Dev Pack must be installed locally for development, and also on the TeamCity server or any agents that will compile the application code. </p>
+<h3>Octopus Deploy</h3>
+<p> The installation file used to install Octopus on-premises can be downloaded <a href="https://octopus.com/downloads/server">here</a>. </p>
+<p> Octopus requires a Microsoft SQL Server to host the database. Microsoft SQL Server Express can be downloaded for free from <a href="https://g.octopushq.com/SqlServerDownload">here</a>. </p>
+<p> Complete the following steps to install Octopus. </p>
+<ol>
+<li>Start the Octopus Installer, click <strong>Next</strong>, accept the Terms in the License Agreement and click <strong>Next</strong>.</li>
+<li>Accept the default Destination Folder or choose a different location and click <strong>Next</strong>.</li>
+<li>Click <strong>Install</strong>, and give the app permission to make changes to your device.</li>
+<li>Click <strong>Finish</strong> to exit the installation wizard and launch the Getting started wizard to configure your Octopus Deploy server.</li>
+<li>Click Get started... and either enter your details to start a free trial of Octopus Deploy or enter your license key and click <strong>Next</strong>.</li>
+<li>Accept the default Home Directory or enter a location of your choice and click <strong>Next</strong>.</li>
+<li>Decide whether to use a <strong>Local System Account</strong> or a <strong>Custom Domain Account</strong>.</li>
+</ol>
+<p> Learn more about the <a href="https://octopus.com/docs/installation/permissions-for-the-octopus-windows-service">permissions required for the Octopus Windows Service</a> or using a <a href="https://octopus.com/docs/installation/managed-service-account">Managed Service Account</a>. </p>
+<ol start="8">
+<li>On the Database page, click the dropdown arrow in the Server Name field to detect the SQL Server Database. Octopus will create the database for you which is the recommended process; however, you can also create your own database.</li>
+<li>Enter a name for the database, and click <strong>Next</strong> and <strong>OK</strong> to create the database.</li>
+</ol>
+<p> Be careful not to use the name of an existing database as the setup process will install Octopus into that pre-existing database. </p>
+<ol start="10">
+<li>Accept the default port and directory or enter your own. This guide assumes Octopus is listening on port 80. Click <strong>Next</strong>.</li>
+<li>If you&rsquo;re using username and passwords stored in Octopus authentication mode, enter the username and password that will be used for the Octopus administrator. If you are using active directory, enter the active directory user details.</li>
+<li>Click <strong>Install</strong>.</li>
+<li>When the installation has completed, click <strong>Finish</strong> to launch the Octopus Manager.</li>
+</ol>
+<h3>
+<span class="diff-html-removed" id="removed-diff-8" previous="added-diff-6" changeId="removed-diff-8" next="added-diff-7" onclick="return tipR(constructToolTipR(this));">IIS</span>
+</h3>
+<p>
+<span class="diff-html-removed" previous="added-diff-6" changeId="removed-diff-8" next="added-diff-7" onclick="return tipR(constructToolTipR(this));"> Microsoft IIS is bundled with Microsoft Windows. See the </span><a href="https://g.octopushq.com/IISHomepage"><span class="diff-html-removed" previous="added-diff-6" changeId="removed-diff-8" next="added-diff-7" onclick="return tipR(constructToolTipR(this));">Microsoft IIS website</span></a><span class="diff-html-removed" previous="added-diff-6" changeId="removed-diff-8" next="added-diff-7" onclick="return tipR(constructToolTipR(this));"> for instructions on how to install IIS in Windows. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-6" changeId="removed-diff-8" next="added-diff-7" onclick="return tipR(constructToolTipR(this));"> Note that </span>
+<h3>
+<span class="diff-html-added" id="added-diff-7" previous="removed-diff-8" changeId="added-diff-7" next="removed-diff-9" onclick="return tipA(constructToolTipA(this));">Azure websites</span>
+</h3>
+<p>
+<span class="diff-html-added" previous="removed-diff-8" changeId="added-diff-7" next="removed-diff-9" onclick="return tipA(constructToolTipA(this));"> Deploying to Azure requires an Azure Service Principal Account. Documentation on how to create this acocunt can be found </span><a href="https://octopus.com/docs/infrastructure/deployment-targets/azure#azure-service-principal"><span class="diff-html-added" previous="removed-diff-8" changeId="added-diff-7" next="removed-diff-9" onclick="return tipA(constructToolTipA(this));">here</span></a><span class="diff-html-added" previous="removed-diff-8" changeId="added-diff-7" next="removed-diff-9" onclick="return tipA(constructToolTipA(this));">. </span>
+</p>
+<p>
+<span class="diff-html-added" previous="removed-diff-8" changeId="added-diff-7" next="removed-diff-9" onclick="return tipA(constructToolTipA(this));"> In order to deploy to Azure an App Service implementing </span>the <strong>ASP.NET <span class="diff-html-removed" id="removed-diff-9" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));">4.8</span></strong><span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));"> feature must be enabled. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));"><img src="/images/guides/iis-aspnet-48.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));"> The following command will enable the required IIS components in Windows: </span>
+</p>
+<pre>
+<span class="diff-html-removed" previous="added-diff-7" changeId="removed-diff-9" next="added-diff-8" onclick="return tipR(constructToolTipR(this));">Start /w pkgmgr /iu:IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-StaticContent;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-ApplicationDevelopment;IIS-ASPNET;IIS-NetFxExtensibility;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-LoggingLibraries;IIS-RequestMonitor;IIS-Security;IIS-RequestFiltering;IIS-HttpCompressionStatic;IIS-WebServerManagementTools;IIS-ManagementConsole;WAS-WindowsActivationService;WAS-ProcessModel;WAS-NetFxEnvironment;WAS-ConfigurationAPI;IIS-ASPNET45</span>
+</pre>
+<p>
+<strong><span class="diff-html-added" id="added-diff-8" previous="removed-diff-9" changeId="added-diff-8" next="removed-diff-10" onclick="return tipA(constructToolTipA(this));">V4.7</span></strong><span class="diff-html-added" previous="removed-diff-9" changeId="added-diff-8" next="removed-diff-10" onclick="return tipA(constructToolTipA(this));"> runtime stack needs to be created for each Octopus environment. App Services are documented </span><a href="https://g.octopushq.com/AppServiceDocumentation"><span class="diff-html-added" previous="removed-diff-9" changeId="added-diff-8" next="removed-diff-10" onclick="return tipA(constructToolTipA(this));">here</span></a><span class="diff-html-added" previous="removed-diff-9" changeId="added-diff-8" next="removed-diff-10" onclick="return tipA(constructToolTipA(this));">. </span>
+</p>
+<h3>Clone source code</h3>
+<p> The source code for the random quotes application is hosted in <a href="https://github.com/OctopusSamples/RandomQuotes-aspmvc4">GitHub</a>. The code can be cloned from <a href="https://github.com/OctopusSamples/RandomQuotes-aspmvc4.git">https://github.com/OctopusSamples/RandomQuotes-aspmvc4.git</a> with the command: </p>
+<pre>git clone https://github.com/OctopusSamples/RandomQuotes-aspmvc4.git</pre>
+<h3>Octopus API Key</h3>
+<p> In order to allow TeamCity to communicate with Octopus, we need to generate an API key. This is done via the Octopus web portal. The web portal can be opened from the <strong>Browse</strong> link in the Octopus Manager. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/manager/octopus-manager.png"> <p> From the Octopus Deploy web portal, sign in, and view your profile. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/apikey/profile.png"> <p> Go to the <strong>API keys tab</strong>. This lists any previous API keys that you have created. Click on <strong>New API key</strong>. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/apikey/keys.png"> <p> Give the API key a name so that you remember what the key is for and click <strong>Generate New</strong>. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/apikey/new-key.png"> <p> Copy the new API key to your clipboard. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/apikey/api-key.png"> <h2>Continuous Integration</h2>
+<p> TeamCity from JetBrains is a powerful continuous integration server. In this tutorial, we will rely on TeamCity to do the following: </p>
+<ul>
+<li>Clone the code from Git.</li>
+<li>Resolve and install any dependencies from NuGet.</li>
+<li>Compile the ASP.NET code.</li>
+<li>Run unit tests.</li>
+<li>Package the application by bundling all the files it needs to run into a NuGet file.</li>
+<li>Push the package to the Octopus (built-in) package repository.</li>
+</ul>
+<h3>Installing the plugins</h3>
+<p> The TeamCity deployment process will make use of the <a href="https://octopus.com/docs/packaging-applications/build-servers/teamcity">Octopus TeamCity plugin</a>. This plugin can be downloaded from the <a href="https://plugins.jetbrains.com/plugin/9038-octopus-deploy-integration">JetBrains Marketplace</a>. </p>
+<h3>Creating the project</h3>
+<p> Log into TeamCity, and click the <strong>Create project</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/010-create-project.png"> <p> Enter <strong>https://github.com/OctopusSamples/RandomQuotes-aspmvc4.git</strong> as the Repository URL, and click the <strong>Proceed</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/020-repo-url.png"> <p> Enter <strong>Random Quotes</strong> as the Project name, and click the <strong>Proceed</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/030-project-name.png"> <p> We will configure the project manually, so click the <strong>configure build steps manually</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/040-configure-manually.png"> <p> We will be presented with a new build step form. Select <strong>NuGet Installer</strong> as the Runner type, select the <strong>&lt;Custom&gt;</strong> option for the Nuget.exe field, and supply the path to the NuGet executable. </p>
+<p> Enter <strong>RandomQuotes.sln</strong> as the Path to solution file, and click the <strong>Save</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/050-nuget-installer.png"> <p> Click the <strong>Add build step</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/060-add-build-step.png"> <p> Select <strong>Visual Studio (sln)</strong> as the Runner type, enter <strong>RandomQuotes.sln</strong> as the Solution file path, and select the version of Visual Studio that will be used to build the solution. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/070-build-options.png"> <p> Click the <strong>Show advanced options</strong> link, and enter <strong>/p:OctoPackEnforceAddingFiles=true</strong> as the Command line paramteres. </p>
+<div class="alert alert-info">
+<p> The argument <strong>/p:OctoPackEnforceAddingFiles=true</strong> ensures that all the default files are packaged by Octopack, along with the custom files specified in the nuspec file. We include a custom nuspec file to include the Roslyn compiler files in the resulting package. </p>
+</div>
+<p> Then select the <strong>Run OctoPack</strong> option, enter <strong>1.0.%build.counter%</strong> as the OctoPack package version, and click the <strong>Save</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/080-octopack-options.png"> <p> Click the <strong>Add build step</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/090-add-build-step.png"> <p> Select <strong>NUnit</strong> as the Runner type, select the <strong>&lt;Custom&gt;</strong> option as the NUnit Console, and supply the path to the nunit3-console.exe executable. Because this project includes the <strong>NUnit.ConsoleRunner</strong> NuGet dependency, the NUnit console runner is found at <strong>packages\NUnit.ConsoleRunner.3.10.0\tools\nunit3-console.exe</strong>. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/100-nunit-settings.png"> <p> Enter <strong>RandomQuotes.Tests\bin\Debug\RandomQuotes.Tests.dll</strong> for the Run tests from field, and click the <strong>Save</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/110-nunit-files.png"> <p> Click the <strong>Add build step</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/120-add-build-step.png"> <p> Select <strong>OctopusDeploy: Push Packages</strong> as the Runner type. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/130-push-top-octo.png"> <p> Enter the Octopus URL and API key. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/140-push-top-octo.png"> <p> Enter <strong>RandomQuotes/obj/octopacked/RandomQuotes.1.0.%build.counter%.nupkg</strong> for the Package paths, and click the <strong>Save</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/150-push-top-octo.png"> <p> The build process has now been defined, so click the <strong>Build Configuration Home</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/160-build-config-home.png"> <p> To initiate the first build, click the <strong>Run...</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/170-run.png"> <p> The build is then started. Click the <strong>#1</strong> link to view the details of the build. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/initialproject/180-build-one.png"> <p> After the build completes, the package will be uploaded to Octopus and ready for deployment. </p>
+<h2>Deploying with Octopus Deploy</h2>
+<p> Now that TeamCity has successfully built the application, we need to configure Octopus to deploy it into our environments. </p>
+<h3>Creating the Environments</h3>
+<p> Environments represent the stages that a deployment must move through as part of the deployment pipeline. We'll create three environments: Dev, Test, and Prod. </p>
+<p> Log into Octopus, and click the <strong>Infrastructure</strong> link, the <strong>Environments</strong> link, and the <strong>ADD ENVIRONMENT</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/environments/015-add-environment-1.png"> <p> Enter <strong>Dev</strong> as the New environment name, and click the <strong>SAVE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/environments/020-environment-dev.png"> <p> Repeat the process for the <strong>Test</strong> environment, and again for the <strong>Prod</strong> environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/environments/035-environment-test.png"> <img width="500" src="https://i.octopus.com/guides/octopus/environments/050-environment-prod.png"> <h3>
+<span class="diff-html-removed" id="removed-diff-10" previous="added-diff-8" changeId="removed-diff-10" next="added-diff-9" onclick="return tipR(constructToolTipR(this));">Deployment Targets</span><span class="diff-html-added" id="added-diff-9" previous="removed-diff-10" changeId="added-diff-9" next="removed-diff-11" onclick="return tipA(constructToolTipA(this));">Creating the Azure account</span>
+</h3>
+<p> In order to <span class="diff-html-removed" id="removed-diff-11" previous="added-diff-9" changeId="removed-diff-11" next="added-diff-10" onclick="return tipR(constructToolTipR(this));">deploy the application</span><span class="diff-html-added" id="added-diff-10" previous="removed-diff-11" changeId="added-diff-10" next="removed-diff-12" onclick="return tipA(constructToolTipA(this));">interact with Azure</span>, we need to <span class="diff-html-removed" id="removed-diff-12" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">configure a target. For this tutorial, we will deploy the ASP.NET applications via a polling tentacle. </span>
+</p>
+<p>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> Tentacle Manager is the Windows application that configures your Tentacle. The links below provide downloads for the Tentacle Manager supporting the latest LTS version of Octopus. </span>
+</p>
+<ul>
+<li>
+<a href="https://octopus.com/downloads/slowlane/WindowsX64/OctopusTentacle"><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Octopus Tentacle x64</span></a><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"></span>
+</li>
+<li>
+<a href="https://octopus.com/downloads/fastlane/WindowsX86/OctopusTentacle"><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Octopus Tentacle 32-bit/x86</span></a><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"></span>
+</li>
+</ul>
+<p>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> Once installed, you can access it from your start menu/start screen. Tentacle Manager can configure Tentacles to use a proxy, delete the Tentacle, and show diagnostic information about the Tentacle. </span>
+</p>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Start the Tentacle installer, accept the license agreement, and follow the onscreen prompts.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">When the Octopus Deploy Tentacle Setup Wizard has completed, click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Finish</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> to exit the wizard.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">When the Tentacle Manager launches, click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">GET STARTED</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">On the communication style screen, select </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Polling Tentacle</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> and click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Next</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">If you are using a proxy see </span><a href="https://octopus.com/docs/infrastructure/deployment-targets/proxy-support"><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Proxy Support</span></a><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">, or click next.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> Add the Octopus credentials the Tentacle will use to connect to the Octopus Server: </span>
+<ol type="a">
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"></span>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">The Octopus URL: the hostname or IP address.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> Select the authentication mode and enter the details: </span>
+<ol type="i">
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"></span>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">The username and password you use to log into Octopus, or:</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">The Octopus API key created </span><a href="#prerequisites"><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">earlier</span></a><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Verify credentials</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">, and then next.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> Give the machine a meaningful name and assign the Tentacle to all the environments (Dev, Test, and Prod) we created earlier. </span>
+<div class="alert alert-info">
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"></span>
+<p>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">For this tutorial we will use a single physical target, and therefore a single Tentacle, to host all our environments.</span>
+</p>
+</div>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Choose or create the role </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">web</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Leave </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Tenants</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> and </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Tenant tags</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));"> blank.</span>
+</li>
+<span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Install</span></strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">, and when the script has finished, click </span><strong><span class="diff-html-removed" previous="added-diff-10" changeId="removed-diff-12" next="added-diff-11" onclick="return tipR(constructToolTipR(this));">Finish</span></strong>
+<p>
+<span class="diff-html-added" id="added-diff-11" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">define the details of an Azure account that will grant us access to perform the deployment. </span>
+</p>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Infrastructure</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> link. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/010-infrastructure.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Accounts</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> link. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/020-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">ADD ACCOUNT</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button, and then click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Azure Subscription</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> option. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/040-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Azure</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> as the account name. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/045-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter the Subscription ID. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/050-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter the Tenant ID. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/060-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter the Application ID. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/070-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter the Application Password / Key, and click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Save</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azureaccount/090-accounts.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Repeat the process to create a target scoped to the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Test</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> and </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Prod</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> environments, with each new target deploying to a new Azure App Service. </span>
+</p>
+<h3>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Creating the Azure WebApp target</span>
+</h3>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Azure App Services are represented as targets in Octopus. We will create a new target for each environment. </span>
+</p>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Infrastructure</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> link. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/010-infrastructure.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Deployment Targets</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> link. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/020-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">ADD DEPLOYMENT TARGET</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/030-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Azure</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button, and click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Add</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button on the Azure Web App tile. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/040-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Azure web app - Dev</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> as the Display Name. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/050-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Select </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Dev</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> as the Environment. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/055-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Enter </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">azurewebapp</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> as the Target Role. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/060-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Select the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">Azure</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> account that was created in the previous section. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/070-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Select the App Service created in Azure that this target will deploy to. We won't be using slots, so click the </span><strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));">SAVE</span></strong><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> button. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/azuretarget/090-target.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-12" changeId="added-diff-11" next="changed-diff-5" onclick="return tipA(constructToolTipA(this));"> Repeat this process to create targets scoped to the Test and Prod environments, with each target referencing a unique Azure App Service</span><span class="diff-html-changed" id="changed-diff-5" changes="<ul class='changelist'><li>Moved out of an <b>ordered list</b>.</li><li>Moved out of a <b>list item</b>.</li><li>Moved to a <b>paragraph</b>.</li></ul>" previous="added-diff-11" changeId="changed-diff-5" next="removed-diff-13" onclick="return tipC(constructToolTipC(this));">. </span>
+</p>
+<h3> Create the Octopus Deployment Project </h3>
+<p> With the environments defined and a target created, we now need to create a deployment project in Octopus. </p>
+<p> Log into Octopus, click the <strong>Projects</strong> link, and then click the <strong>ADD PROJECT</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/010-octopus-add-project.png"> <p> Enter <strong>Random Quotes</strong> for the project name and click the <strong>SAVE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/015-octopus-new-project-name.png"> <p> We start by defining the variables that we will consume as part of the deployment. Click the <strong>Variables</strong> link, and then select the <strong>Project</strong> option. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/020-octopus-variables.png"> <p> The first variable we'll define is called <strong>EnvironmentName</strong>. This matches the name of a key in the <strong>Web.config</strong> file: <pre>&lt;configuration&gt;
+        &lt;appSettings&gt;
+            ...
+            &lt;add key="EnvironmentName" value="DEV" /&gt;
+        &lt;/appSettings&gt;
+         ...
+    &lt;/configuration&gt;</pre> We set the value of this variable to match the name of the environment that Octopus is deploying the application into by setting its value to <strong>#{Octopus.Environment.Name}</strong>. This variable, in conjuction with the <a href="https://octopus.com/docs/deployment-process/configuration-features/xml-configuration-variables-feature"><strong>Configuration Variables</strong> feature</a>, means that the config file will be updated during deployment to reflect the current environment. This is how we can have a single, environment agnostic package, and customize it for any environment it is deployed into. </p>
+<p>
+<span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-13" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">We are then going to define a variable called </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">IIS Port</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> with unique values bound to each environment. This means that when we deploy the project to each environment, a new port will be used to expose the application in IIS. </span>
+</p>
+<p>
+<span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> By exposing each environment as a unique port, we can implement multiple environments with a single physical target. </span>
+</p>
+<ul>
+<li>
+<span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Define a value of </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">8081</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> scoped to the environment </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Dev</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Define a value of </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">8082</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> scoped to the environment </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Test</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+<li>
+<span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Define a value of </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">8083</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));"> scoped to the environment </span><strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">Prod</span></strong><span class="diff-html-removed" previous="changed-diff-5" changeId="removed-diff-13" next="removed-diff-14" onclick="return tipR(constructToolTipR(this));">.</span>
+</li>
+</ul>
+<p> Then click the <strong>SAVE</strong> button to save the changes. </p>
+<span class="diff-html-removed" previous="removed-diff-13" changeId="removed-diff-14" next="added-diff-12" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-14" previous="removed-diff-13" changeId="removed-diff-14" next="added-diff-12" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/025-octopus-variables-populated.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="removed-diff-13" changeId="removed-diff-14" next="added-diff-12" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-12" previous="removed-diff-14" changeId="added-diff-12" next="removed-diff-15" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/025-octopus-variables-azure-populated.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-14" changeId="added-diff-12" next="removed-diff-15" onclick="return tipA(constructToolTipA(this));"> </span>
+<p> We will now define the deployment process. Click the <strong>Overview</strong> link, then click the <strong>DEFINE YOUR DEPLOYMENT PROCESS</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/030-octopus-define-process.png"> <p> Click the <strong>ADD STEP</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/035-octopus-add-step.png"> <p> Enter <strong><span class="diff-html-removed" id="removed-diff-15" previous="added-diff-12" changeId="removed-diff-15" next="added-diff-13" onclick="return tipR(constructToolTipR(this));">iis</span></strong><span class="diff-html-removed" previous="added-diff-12" changeId="removed-diff-15" next="added-diff-13" onclick="return tipR(constructToolTipR(this));"> </span><strong><span class="diff-html-added" id="added-diff-13" previous="removed-diff-15" changeId="added-diff-13" next="removed-diff-16" onclick="return tipA(constructToolTipA(this));">Azure Web App</span></strong><span class="diff-html-added" previous="removed-diff-15" changeId="added-diff-13" next="removed-diff-16" onclick="return tipA(constructToolTipA(this));"> </span>into the search box. </p>
+<span class="diff-html-removed" previous="added-diff-13" changeId="removed-diff-16" next="added-diff-14" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-16" previous="added-diff-13" changeId="removed-diff-16" next="added-diff-14" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/040-octopus-search-iis.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-13" changeId="removed-diff-16" next="added-diff-14" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-14" previous="removed-diff-16" changeId="added-diff-14" next="removed-diff-17" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/040-octopus-azure-search-webapp.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-16" changeId="added-diff-14" next="removed-diff-17" onclick="return tipA(constructToolTipA(this));"> </span>
+<p> Click the <strong>ADD</strong> button on the <span class="diff-html-removed" id="removed-diff-17" previous="added-diff-14" changeId="removed-diff-17" next="added-diff-15" onclick="return tipR(constructToolTipR(this));">IIS </span><span class="diff-html-added" id="added-diff-15" previous="removed-diff-17" changeId="added-diff-15" next="removed-diff-18" onclick="return tipA(constructToolTipA(this));">Deploy an Azure Web App </span>tile. </p>
+<span class="diff-html-removed" previous="added-diff-15" changeId="removed-diff-18" next="added-diff-16" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-18" previous="added-diff-15" changeId="removed-diff-18" next="added-diff-16" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/045-octopus-add-iis.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-15" changeId="removed-diff-18" next="added-diff-16" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-16" previous="removed-diff-18" changeId="added-diff-16" next="removed-diff-19" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/045-octopus-azure-add-azure-webapp.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-18" changeId="added-diff-16" next="removed-diff-19" onclick="return tipA(constructToolTipA(this));"> </span>
+<p> Enter <strong>Deploy <span class="diff-html-removed" id="removed-diff-19" previous="added-diff-16" changeId="removed-diff-19" next="added-diff-17" onclick="return tipR(constructToolTipR(this));">web app to IIS</span><span class="diff-html-added" id="added-diff-17" previous="removed-diff-19" changeId="added-diff-17" next="removed-diff-20" onclick="return tipA(constructToolTipA(this));">an Azure Web App</span></strong><span class="diff-html-added" previous="removed-diff-19" changeId="added-diff-17" next="removed-diff-20" onclick="return tipA(constructToolTipA(this));"> </span>as the step name. </p>
+<span class="diff-html-removed" previous="added-diff-17" changeId="removed-diff-20" next="added-diff-18" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-20" previous="added-diff-17" changeId="removed-diff-20" next="added-diff-18" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/050-octopus-step-name.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-17" changeId="removed-diff-20" next="added-diff-18" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-18" previous="removed-diff-20" changeId="added-diff-18" next="removed-diff-21" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/050-octopus-azure-step-name.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-20" changeId="added-diff-18" next="removed-diff-21" onclick="return tipA(constructToolTipA(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-21" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));">Select the </span><strong><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));">web</span></strong><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));"> role. This role matches the role assigned to the Tentacle that was </span><a href="#deployment-targets"><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));">configured earlier</span></a><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));">. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/055-octopus-step-role.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-18" changeId="removed-diff-21" next="added-diff-19" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" id="added-diff-19" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));">Enter </span><strong><span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));">azurewebapp</span></strong><span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));"> as the On Behalf Of option. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/055-octopus-azure-step-role.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-21" changeId="added-diff-19" next="removed-diff-22" onclick="return tipA(constructToolTipA(this));"> </span>
+<p> Select the <strong>RandomQuotes</strong> package ID. This is the package that TeamCity pushed to the built-in feed. <span class="diff-html-removed" id="removed-diff-22" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"></span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/060-octopus-step-package.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Enter </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">RandomQuotes</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> as the web site name. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/065-octopus-step-website-name.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Enter </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">RandomQuotes</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> as the application pool name. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/070-octopus-step-apppool-name.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Because we have installed Octopus and IIS on the same host, and Octopus is listening on port 80, we need to remove the default port binding to avoid a conflict. Click the cross icon on the existing binding. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/075-octopus-step-remove-binding.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Click the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">ADD</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> button to add a new binding. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/080-octopus-step-add-binding.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Enter </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">#{IIS Port}</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> as the port. This is how we reference the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">IIS Port</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> variable created earlier. Then click the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">OK</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> button. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/085-octopus-step-binding-port.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> Select the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">Enable Anonymous authentication</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> option, and unselect the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">Enable Windows authentication</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> option. Then click the </span><strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));">SAVE</span></strong><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> button. </span>
+</p>
+<span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/090-octopus-step-auth.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-19" changeId="removed-diff-22" next="added-diff-20" onclick="return tipR(constructToolTipR(this));"> </span>
+<p>
+<span class="diff-html-added" id="added-diff-20" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));">The remaining values can be left at their defaults, so click the </span><strong><span class="diff-html-added" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));">SAVE</span></strong><span class="diff-html-added" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));"> button. </span>
+</p>
+<span class="diff-html-added" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));"> </span><span class="diff-html-added" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/octopus/project/060-octopus-step-package-azure.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-22" changeId="added-diff-20" next="removed-diff-23" onclick="return tipA(constructToolTipA(this));"> </span>
+<h3>Deploy!</h3>
+<p> We now have a deployment project in Octopus ready to deploy our ASP.NET application to our Dev, Test, and Prod environments. The next step is to create and deploy a release. </p>
+<p> Click the <strong>CREATE RELEASE</strong> button. </p>
+<p> The release creation screen provides an opportunity to review the packages that will be included and add any release notes. By default, the latest package is selected automatically. Click the <strong>SAVE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/100-octopus-save-release.png"> <p> This screen allows you to select the environment that will be deployed into. Lifecycles can be used to customize the progression of deployments through environments (this is <a href="#lifecycles">demonstrated later in the guide</a>), however we will accept the default option to deploy to the Dev environment by clicking the <strong>DEPLOY TO DEV...</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/105-octopus-deploy-to-dev.png"> <p> Click the <strong>DEPLOY</strong> button to deploy the application into the Dev environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/110-octopus-deploy.png"> <p> The application is then deployed. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/project/115-octopus-deployment.png"> <p> Congratulations! You have now built and deployed your first application. Open up <span class="diff-html-removed" id="removed-diff-23" previous="added-diff-20" changeId="removed-diff-23" next="added-diff-21" onclick="return tipR(constructToolTipR(this));">http</span><span class="diff-html-added" id="added-diff-21" previous="removed-diff-23" changeId="added-diff-21" next="removed-diff-24" onclick="return tipA(constructToolTipA(this));">the URL of the Azure web application, which in our case is https</span>://<span class="diff-html-removed" id="removed-diff-24" previous="added-diff-21" changeId="removed-diff-24" next="added-diff-22" onclick="return tipR(constructToolTipR(this));">localhost:8081 </span><span class="diff-html-added" id="added-diff-22" previous="removed-diff-24" changeId="added-diff-22" next="removed-diff-25" onclick="return tipA(constructToolTipA(this));">jenkinsaspnetbuiltinfeeddev.azurewebsites.net/, </span>to view a random quote. Note the <span class="diff-html-removed" id="removed-diff-25" previous="added-diff-22" changeId="removed-diff-25" next="added-diff-23" onclick="return tipR(constructToolTipR(this));">port (8081) </span><span class="diff-html-added" id="added-diff-23" previous="removed-diff-25" changeId="added-diff-23" next="removed-diff-26" onclick="return tipA(constructToolTipA(this));">URL </span>matches the <span class="diff-html-removed" id="removed-diff-26" previous="added-diff-23" changeId="removed-diff-26" next="added-diff-24" onclick="return tipR(constructToolTipR(this));">value </span><span class="diff-html-added" id="added-diff-24" previous="removed-diff-26" changeId="added-diff-24" next="removed-diff-27" onclick="return tipA(constructToolTipA(this));">name </span>of the <strong><span class="diff-html-removed" id="removed-diff-27" previous="added-diff-24" changeId="removed-diff-27" next="added-diff-25" onclick="return tipR(constructToolTipR(this));">IIS Port</span></strong><span class="diff-html-removed" previous="added-diff-24" changeId="removed-diff-27" next="added-diff-25" onclick="return tipR(constructToolTipR(this));"> variable we </span><span class="diff-html-added" id="added-diff-25" previous="removed-diff-27" changeId="added-diff-25" next="added-diff-26" onclick="return tipA(constructToolTipA(this));">Azure App Service that was defined in the target </span>scoped to the Dev environment<span class="diff-html-added" id="added-diff-26" previous="added-diff-25" changeId="added-diff-26" next="removed-diff-28" onclick="return tipA(constructToolTipA(this));">, and will be unqiue for each Azure App Service</span>. </p>
+<span class="diff-html-removed" previous="added-diff-26" changeId="removed-diff-28" next="added-diff-27" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-28" previous="added-diff-26" changeId="removed-diff-28" next="added-diff-27" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/app/aspnet-app/iis/aspnet-random-quotes-dev-app.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-26" changeId="removed-diff-28" next="added-diff-27" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-27" previous="removed-diff-28" changeId="added-diff-27" next="removed-diff-29" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/app/aspnet-app/azurewebapp/aspnet-random-quotes-dev-app.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-28" changeId="added-diff-27" next="removed-diff-29" onclick="return tipA(constructToolTipA(this));"> </span>
+<h2>Continuous Deployments</h2>
+<p> The process of deploying a successful build to the Dev environment is currently a manual one; TeamCity pushes the file to Octopus, and we must trigger the initial deployment to the Dev environment from within Octopus. Typically though, deployments to the Dev environment will be performed automatically if a build and all of its tests succeed. </p>
+<p> To trigger the initial deployment to the Dev environment after a successful build, we will go back to the project we created in TeamCity and add an additional step to create an Octopus release and then deploy it to the Dev environment. </p>
+<h3>Adding a Create and Deploy Release Step</h3>
+<p> As before, we make use of the Octopus plugin to interact with the Octopus server. In this case, we use the plugin to create and deploy a release in Octopus after the package has been pushed. </p>
+<p> Log back into TeamCity, and then click the <strong>Build</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/001-create-release.png"> <p> Click the <strong>Edit Configuration Settings</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/002-create-release.png"> <p> Click the <strong>Build Steps</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/003-create-release.png"> <p> Click the <strong>Add build step</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/004-create-release.png"> <p> Select <strong>OctopusDeploy: Create release</strong> as the Runner type, and set the Octopus URL and API key. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/040-create-release.png"> <p> Enter <strong>Random Quotes</strong> as the Project. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/050-create-release.png"> <p> Enter <strong>Dev</strong> as the Environment(s). This will trigger an initial deployment to the Dev environment once the build is complete. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/060-create-release.png"> <p> Click the <strong>Save</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/070-create-release.png"> <p> Now we want to trigger a build. Click the <strong>Build Configuration Home</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/080-build-config-home.png"> <p> Click the <strong>Run...</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/090-run.png"> <p> Click the <strong>#2</strong> link to view the details of the new build. </p> 
+<img width="500" src="https://i.octopus.com/guides/teamcity/createrelease/100-build-one.png"> <p> When the build is complete, a deployment will have been triggered in Octopus to the Dev environment. </p>
+<h2> Additional Configuration </h2>
+<p> Now we will explore some of the more advanced features of Octopus that allow us to customize the deployment progression through environments, secure deployments to production environments, add deployment sign offs, view the audit logs, and add notifications. </p>
+<h3>Lifecycles</h3>
+<p> Our project currently uses the default lifecycle, which defines a progression through all the environments in the order they were created in. </p>
+<p> A custom lifecycle allows the progression of a deployment to be further refined, by defining only a subset of environments that can be deployed to, allowing some environments to be skipped entirely, or requiring that a minimum number of environments are successfully deployed to before moving onto the next environment. </p>
+<p> Here we will create a custom lifecycle that makes deployments to the Dev environment optional. This means that initial deployments can be made to the Dev <i>or</i> Test environments, but a successful deployment <i>must</i> be made to the Test environment before it can be progressed to the Prod environment. </p>
+<p> Skipping the Dev environment like this may be useful for promoting a release candidate build directly to the Test environment for product owners or testers to review. </p>
+<p> Click the <strong>Library</strong> link, click the <strong>Lifecycles</strong> link, and click the <strong>ADD LIFECYCLE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/015-lifecycle-add-lifecycle.png"> <p> Set the lifecycle name to <strong>Dev, Test, and Prod</strong>, and the description to <strong>Progression from the Dev to the Prod environments</strong>. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/020-lifecycle-name.png"> <p> Phases are used to group environments that can accept a deployment. Simple lifecycles, such as the lifecycle we are creating, have a one-to-one relationship between phases and environments. </p>
+<p> Click the <strong>ADD PHASE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/025-lifecycle-add-phase-1.png"> <p> Enter <strong>Dev</strong> as the phase name, and select the <strong>Optional phase</strong> option. This means that deployments can skip this phase, and therefor environments defined in it, and deploy directly to the next phase. </p>
+<p> Because we are mapping each environment to its own phase, the name of the phase matches the name of the environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/030-lifecycle-phase-name-1.png"> <p> Click the <strong>ADD ENVIRONMENT</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/035-lifecycle-add-environment-1.png"> <p> Click the dropdown arrow, select the <strong>Dev</strong> environment, and click the <strong>OK</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/040-lifecycle-select-environment-1.png"> <p> Repeat the process to add a new phase for the <strong>Test</strong> and <strong>Prod</strong> environments, leaving the default <strong>All must complete</strong> option selected. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/060-lifecycle-select-environment-2.png"> <img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/080-lifecycle-select-environment-3.png"> <p> Click the <strong>SAVE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/090-lifecycle-save.png"> <p> We now need to switch the deployment project from the Default Lifecycle to the newly created lifecycle. </p>
+<p> Click the <strong>Projects</strong> link, then click the <strong>Random Quotes</strong> project tile. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/095-random-quotes-project.png"> <p> Click the <strong>Process</strong> link, then click the <strong>CHANGE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/100-random-quotes-change-lifecycle.png"> <p> Select the <strong>Dev, Test, and Prod</strong> lifecycle. Notice the Dev environment is shown as optional. </p>
+<p> Click the <strong>SAVE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/105-random-quotes-select-lifecycle.png"> <p> Click the <strong>CREATE RELEASE</strong> button, and click the <strong>SAVE</strong> button to save the new release. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/110-random-quotes-create-release.png"> <p> Because the Dev environment has been configured as optional, the initial release can be made to either the Dev or the Test environments. We'll skip the Dev environment and deploy straight to Test. </p>
+<p> Click the <strong>DEPLOY TO...</strong> button, and select the <strong>Test</strong> environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/115-random-quotes-select-test.png"> <p> Click the <strong>DEPLOY</strong> button to deploy the application to the Test environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/120-random-quotes-deploy-test.png"> <p> The deployment is then performed directly in the Test environment, skipping the Dev environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/lifecycle/125-random-quotes-deployed-test.png"> <p> Opening <span class="diff-html-removed" id="removed-diff-29" previous="added-diff-27" changeId="removed-diff-29" next="added-diff-28" onclick="return tipR(constructToolTipR(this));">http</span><span class="diff-html-added" id="added-diff-28" previous="removed-diff-29" changeId="added-diff-28" next="removed-diff-30" onclick="return tipA(constructToolTipA(this));">https</span>://<span class="diff-html-removed" id="removed-diff-30" previous="added-diff-28" changeId="removed-diff-30" next="added-diff-29" onclick="return tipR(constructToolTipR(this));">localhost:8082 </span><span class="diff-html-added" id="added-diff-29" previous="removed-diff-30" changeId="added-diff-29" next="removed-diff-31" onclick="return tipA(constructToolTipA(this));">jenkinsaspnetbuiltinfeedtest.azurewebsites.net </span>displays the copy of the Random Quotes application deployed to the Test environment. Note the <span class="diff-html-removed" id="removed-diff-31" previous="added-diff-29" changeId="removed-diff-31" next="added-diff-30" onclick="return tipR(constructToolTipR(this));">port </span><strong><span class="diff-html-removed" previous="added-diff-29" changeId="removed-diff-31" next="added-diff-30" onclick="return tipR(constructToolTipR(this));">8082</span></strong><span class="diff-html-removed" previous="added-diff-29" changeId="removed-diff-31" next="added-diff-30" onclick="return tipR(constructToolTipR(this));"> is the value of the </span><strong><span class="diff-html-removed" previous="added-diff-29" changeId="removed-diff-31" next="added-diff-30" onclick="return tipR(constructToolTipR(this));">IIS Port</span></strong><span class="diff-html-removed" previous="added-diff-29" changeId="removed-diff-31" next="added-diff-30" onclick="return tipR(constructToolTipR(this));"> variable </span><span class="diff-html-added" id="added-diff-30" previous="removed-diff-31" changeId="added-diff-30" next="added-diff-31" onclick="return tipA(constructToolTipA(this));">URL matches the name of the Azure App Service that was defined in the target </span>scoped to the Test environment<span class="diff-html-added" id="added-diff-31" previous="added-diff-30" changeId="added-diff-31" next="removed-diff-32" onclick="return tipA(constructToolTipA(this));">, and will be unqiue for each Azure App Service</span>. </p>
+<p> Also see the footer text that says <strong>running in Test</strong>. This is the result of the <strong>Configuration variables</strong> feature and the <strong>EnvironmentName</strong> variable replacing the initial value of <strong>DEV</strong> in the <strong>Web.config</strong> file with <strong>Test</strong>. This is an example of a single, environment agnostic package being customized for the environment it is being deployed into. </p>
+<span class="diff-html-removed" previous="added-diff-31" changeId="removed-diff-32" next="added-diff-32" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-removed" id="removed-diff-32" previous="added-diff-31" changeId="removed-diff-32" next="added-diff-32" onclick="return tipR(constructToolTipR(this));"><img width="500" src="https://i.octopus.com/guides/octopus/app/aspnet-app/iis/aspnet-random-quotes-test-app.png" changeType="diff-removed-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-removed" previous="added-diff-31" changeId="removed-diff-32" next="added-diff-32" onclick="return tipR(constructToolTipR(this));"> </span><span class="diff-html-added" id="added-diff-32" previous="removed-diff-32" changeId="added-diff-32" next="changed-diff-6" onclick="return tipA(constructToolTipA(this));"><img width="500" src="https://i.octopus.com/guides/app/aspnet-app/azurewebapp/aspnet-random-quotes-test-app.png" changeType="diff-added-image" onLoad="updateOverlays()" onError="updateOverlays()" onAbort="updateOverlays()"></span><span class="diff-html-added" previous="removed-diff-32" changeId="added-diff-32" next="changed-diff-6" onclick="return tipA(constructToolTipA(this));"> </span>
+<h3>Approvals</h3>
+<p> It is a common business requirement to have testers or product owners manually verify that a particular build meets the requirements before a deployment can be considered successful. </p>
+<p> Octopus supports this workflow through the use of manual intervention steps. We'll add a manual intervention step to the end of the deployment process, which requires a responsible party to verify the build meets the requirements. </p>
+<p> Open the Random Quotes project, click the <strong>Process</strong> link, and click the <strong>ADD STEP</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/010-add-step.png"> <p> Search for the <strong>Manual Intervention Required</strong> step, and add it to the process. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/020-octopus-add-intervention.png"> <p> Enter <strong>Deployment Sign Off</strong> for the Step Name. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/025-octopus-step-name.png"> <p> Enter the following for the Instructions: <pre>Open the application and confirm it meets all the requirements.</pre>
+</p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/030-octopus-step-instructions.png"> <p> Because every build is automatically deployed to the Dev environment, it doesn't make sense to force someone to manually approve all those deployments. To accommodate this, we do not enable the manual intervention step for deployments to the Dev environment. </p>
+<p> Expand the <strong>Environments</strong> section under the <strong>Conditions</strong> heading, select the <strong>Skip specific environments</strong> option, and select the <strong>Dev</strong> environment. </p>
+<p> Click the <strong>SAVE</strong> button to save the step. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/045-octopus-step-skip-dev.png"> <p> When this application is deployed to the Test or Prod environments, a prompt will be displayed requiring manual sign off. Click the <strong>ASSIGN TO ME</strong> button to assign the task to yourself. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/050-octopus-deploy-assign-intervention.png"> <p> Add a note in the provided text box, and click the <strong>PROCEED</strong> button to complete the deployment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/055-octopus-deploy-intervention-notes.png"> <p> The deployment will then complete successfully. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/intervention/060-octopus-deploy-success.png"> <h3>Email Notifications</h3>
+<p> Octopus has native support for sending email notifications as part of the deployment process. We will add a step to the deployment process to let people know when a deployment has been performed to an environment. </p>
+<p> To start, we need to configure an SMTP server to send our emails. For this guide, we'll use the free SMTP server provided by Google. </p>
+<p> Click the <strong>Configuration</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/005-octopus-configuration.png"> <p> Click the <strong>SMTP</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/010-octopus-smtp.png"> <ul>
+<li>Enter <strong>smtp.gmail.com</strong> as the SMTP Host.</li>
+<li>Enter <strong>587</strong> as the SMTP Port.</li>
+<li>Enable the <strong>Use SSL/TLS</strong> option.</li>
+<li>Enter your Gmail address as the From Address.</li>
+<li>Enter your Gmail address and password in the credentials.</li>
+</ul>
+<div class="alert alert-info">
+<p> You will need to enable the <a href="https://g.octopushq.com/GoogleLessSecureApps">Less secure apps</a> option on your Google account for Octopus to send emails via the Google SMTP server. </p>
+</div> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/015-octopus-smtp-populated.png"> <p> Open the Random Quotes project, click the <strong>Process</strong> link, and click the <strong>ADD STEP</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/025-add-step.png"> <p> Search for the <strong>Send an Email</strong> step, and add it to the process. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/035-octopus-add-email.png"> <p> Enter <strong>Random quotes deployment status</strong> for the Step Name. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/040-octopus-step-name.png"> <p> Enter the email address to receive the notification in the To field. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/045-octopus-step-to.png"> <p> Enter <strong>Random quotes deployment status</strong> as the Subject. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/050-octopus-step-subject.png"> <p> Enter the following as the Body: <pre>Deployment to #{Octopus.Environment.Name}
+#{each step in Octopus.Step}
+StepName: #{step}
+Status: #{step.Status.Code}
+#{/each}</pre> Here we have used the <strong>#{Octopus.Environment.Name}</strong> variable provided by Octopus to add the name of the environment that was deployed to, and then looped over the status codes in the <strong>#{Octopus.Step}</strong> variable get the status of each individual step. </p>
+<p> The complete list of system variables can be found in the <a href="https://octopus.com/docs/deployment-process/variables/system-variables">Octopus documentation</a>. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/055-octopus-step-body.png"> <p> We want to be notified of the status of this deployment regardless of whether the deployment succeeded or failed. Click the <strong>Run Conditions</strong> section to expand it. </p>
+<p> Select the <strong>Always run</strong> option, which ensures the notification email is sent even when the deployment or the manual intervention fail. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/058-octopus-step-always-run.png"> <p> Given every change to the source code will result in a deployment to the Dev environment, we do not want to generate reports for deployments to this environment. </p>
+<p> Click the <strong>Environments</strong> section to expand it. Select the <strong>Skip specific environments</strong> option, and select the Dev environment to skip it. </p>
+<p> This is the final configuration for the step, so click the <strong>SAVE</strong> button to save the changes. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/059-octopus-step-skip-dev.png"> <p> Deploy the project to any environment. When the deployment succeeds, the notification email will be sent. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/email/notification-email.png"> <h3>Permissions</h3>
+<p> One of the strengths of Octopus is that it models environments as a first-class entity. This means the security layer can apply rules granting access only to specific environments. We'll take advantage of this ability to model and secure environments to create two users, an internal deployer who can deploy to the Dev and Test environments, and a production deployer who can deploy to the Prod environment. </p>
+<p> We start by creating the users. Click the <strong>Configuration</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/005-octopus-configuration.png"> <p> Click the <strong>Users</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/010-octopus-users.png"> <p> Click the <strong>ADD USER</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/015-octopus-add-user.png"> <p> Enter <strong>internaldeployer</strong> as the Username. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/020-octopus-username.png"> <p> Enter <strong>Internal Deployer</strong> as the Display name. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/025-octopus-displayname.png"> <p> Enter the user's email address. We have used a dummy address of <strong>internaldeployer@example.org</strong> here. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/030-octopus-email.png"> <p> Enter a password and confirm it. Then click the <strong>SAVE</strong> button to create the user. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/035-octopus-password.png"> <p> Repeat the process for a user called <strong>productiondeployer</strong>. The summary for the <strong>productiondeployer</strong> user is shown below. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/067-octopus-user-overview.png"> <p> The newly created users are not assigned to any teams, and so have no permissions to do anything. To grant them permissions, we must first create two teams. The internal deployment team will grant access to deploy to the Dev and Test environments, while the production deployment team will grant access to deploy to the Prod environment. </p>
+<p> Click the <strong>Configuration</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/005-octopus-configuration.png"> <p> Click the <strong>Teams</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/075-octopus-teams.png"> <p> Click the <strong>ADD TEAM</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/080-octopus-add-team.png"> <p> Enter <strong>Internal Deployers</strong> for the New team name, and <strong>Grants access to perform a deployment to the internal environments</strong> for the Team description. Click the <strong>SAVE</strong> button to create the team. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/085-octopus-new-team.png"> <p> We need to add the <strong>internaldeployer</strong> user to this team. Click the <strong>ADD MEMBER</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/090-octopus-add-member.png"> <p> Select the <strong>Internal Deployer</strong> user from the dropdown list, and click the <strong>ADD</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/095-octopus-add-internal-user.png"> <p> The team does not grant any permissions yet. To add permissions click the <strong>USER ROLES</strong> tab, and click the <strong>INCLUDE USER ROLE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/100-octopus-user-roles.png"> <p> Select the <strong>Deployment creator</strong> role from the dropdown list. As the name suggests, this role allows a user to create a deployment, which results in the deployment process being executed. </p>
+<p> Click the <strong>DEFINE SCOPE</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/105-octopus-add-role.png"> <p> We only want to allow the internal deployer to deploy to the internal environments. Select the <strong>Dev</strong> and <strong>Test</strong> environments, and click the <strong>APPLY</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/110-octopus-role-scope.png"> <p> The permissions are then applied. We need a second permission to allow the internal deployer to view the projects dashboard. Click the <strong>INCLUDE USER ROLE</strong> button again. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/115-octopus-user-roles.png"> <p> Select the <strong>Project viewer</strong> role. This role does not need to be scoped, so click the <strong>APPLY</strong> button. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/120-octopus-add-role.png"> <p> Here is the final set of roles applied to the team. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/123-octopus-team-roles.png"> <p> Repeat the process to create a team called <strong>Production Deployers</strong> that includes the <strong>productiondeployer</strong> user, and grants the <strong>Deployment creator</strong> role scoped to the <strong>Prod</strong> environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/178-octopus-team-roles.png"> <p> When we log in as the <strong>internaldeployer</strong> user, we see that the Random Quotes project dashboard shows <strong>DEPLOY...</strong> buttons for the Dev and Test environments. Any deployments in the production environment would be visible, but they cannot be created by this user. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/180-octopus-internal-deployer-overview.png"> <p> When we log in as the <strong>productiondeployer</strong> user, we see that the Random Quotes project dashboard shows <strong>DEPLOY...</strong> buttons only for the Prod environment. Also note that the lifecycle rules still apply, and only successful deployments to the Test environment are available to be promoted to the Prod environment. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/permissions/185-octopus-proudction-deployer-overview.png"> <h3>Audit Log</h3>
+<p> Important interactions in Octopus are tracked in the audit log. This is useful for teams that have security or legislative requirements to trace the changes and deployments made to their infrastructure. </p>
+<p> To view the audit log click the <strong>Configuration</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/audit/005-octopus-configuration.png"> <p> Click the <strong>Audit</strong> link. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/audit/010-octopus-audit.png"> <p> A complete list of records are shown, with filtering available to help find a specific event. </p> 
+<img width="500" src="https://i.octopus.com/guides/octopus/audit/015-octopus-audit-logs.png"> <h2>Conclusion</h2>
+<p> In this guide we ran through the process of building a complete CI/CD pipeline with: </p>
+<ul>
+<li>TeamCity building and testing the source code, and pushing the package to Octopus.</li>
+<li>Octopus deploying the package to the Dev, Test, and Prod environments.</li>
+<li>Email notifications generated when deployments succeed or fail.</li>
+<li>Manual sign off for deployments to the Test and Prod environments.</li>
+<li>Users with limited access to create releases in a subset of environments.</li>
+</ul>
+<p> This is a solid starting point for any development team, but Octopus offers so much more! Below are more resources you can access to learn about the advanced functionality provided by Octopus. </p>
+<ul>
+<li>
+<a href="https://octopus.com/docs">The Octopus Documentation</a>
+</li>
+<li>
+<a href="https://octopus.com/blog">The Octopus Blog</a>
+</li>
+<li>
+<a href="https://octopus.com/blog/tag/Events%20and%20Webinars">Upcoming events and webinars</a>
+</li>
+<li>
+<a href="https://octopus.com/slack">The Octopus community slack channel</a>
+</li>
+</ul> 
+<aside id="docs-feedback" class="hidden d-print-none">
+<div class="text-center initial-view">
+<p class="my-4"> Was this page helpful? </p>
+<p> 
+<button class="btn btn-light yes mx-1"> &#128578; Yes thanks! </button> <button class="btn btn-light no mx-1"> &#128542; Not really </button> 
+</p>
+</div>
+<div class="yes-view">
+<p>&#128578; That's great!</p>
+<p>Is there anything we can do to improve it?</p>
+<p>
+<a href="" class="suggestion">Now that you mention it...</a>
+</p>
+</div>
+<div class="feedback-view">
+<p class="feedback-intro"> 
+<strong>We're sorry this page did not help you! </strong>
+<br> We review your answers every month to find ways to improve these docs. How can we improve it? </p> 
+<textarea class="form-control feedback-textbox" placeholder="It really helps us improve the content if you tell us what you were trying to do..." style="min-width: 300px; min-height: 150px"></textarea> 
+<p>
+<button class="btn btn-success send my-3">Send</button>
+</p>
+</div>
+<div class="confirmation-view">
+<p>Thanks so much for taking the time to give us feedback!</p>
+</div>
+</aside> 
+</article> 
+</div>
+<div id="toc-column" class="d-none d-xl-block col-xl-2 order-md-last d-print-none" style="padding-bottom: 100px;"> 
+<aside class="documentation" id="toc"></aside> 
+</div>
+<div class="col-md-3 col-lg-3 col-xl-2 order-md-first d-print-none" style="padding-bottom: 100px;"> 
+<aside class="documentation">
+<div class="sidebar">
+<ul>
+<li class="  "> 
+<a href="/docs/getting-started"> Getting Started </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/installation"> Installation </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/octopus-cloud"> Octopus Cloud </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/infrastructure"> Infrastructure </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/packaging-applications"> Packaging Applications </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/deployment-process"> Deployment Process </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/deployment-examples"> Deployment Examples </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/deployment-patterns"> Deployment Patterns </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/api-and-integration"> API and Integrations </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/administration"> Administration </a> 
+</li>
+<li class="  has-children"> 
+<a href="/docs/support"> Support </a> 
+</li>
+<li class="  "> 
+<a href="/docs/credits"> Credits </a> 
+</li>
+</ul>
+</div>
+</aside> 
+</div>
+</div>
+</div>
+</section> 
+<template id="marketing-event-popup-template">
+<div id="marketing-event-popup" style="display: none; opacity: 0; transition: all 0.2s ease-in-out; position: fixed; z-index: 100; right: 20px; max-width: 300px; bottom: 30px; box-shadow: 0 1px 3px 0 rgba(0,0,0,.3); background: #fff; border-top: 5px solid #2f93e0; border-radius: 3px; font-size: 14px; text-align: center">
+<div style="position: relative"> 
+<img id="event-image" src="https://i.octopus.com/blog/2019-06/octopus-101-getting-started/octopus-101.png" style="height: 180px" alt="Octopus Webinar"> <button type="button" class="close" aria-label="Close" data-cookie="OctopusEventDismissed=yes; expires=Thu, 07 Nov 2019 00:00:00 GMT" style="position: absolute; top: 5px; right: 5px; background: #ffffffee; border-radius: 20px; width: 30px; height: 30px"> <span aria-hidden="true" style="font-weight: normal">&times;</span> </button> 
+<div style="padding: 10px 20px"> 
+<strong style="font-size: 13px; text-transform: uppercase; color: #999; font-weight: normal" id="event-category"></strong> <strong style="display: block; font-size: 16px" id="event-title"></strong> 
+<div style="padding: 0; margin: 0; font-size: 90%" id="event-time"></div> 
+<a href="#" class="btn btn-link" target="_blank" id="event-link">Details &amp; register</a> 
+</div>
+</div>
+</div>
+</template> 
+<div id="cookieConsent" class="d-none d-lg-block" style="position: absolute; top: -300px; left: 0; right: 0; z-index: 1500; opacity: 0; transition: all 0.5s; background: #0f2535; color: #eee; box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0,0,0,.2), 0 0.125rem 0.125rem 0 rgba(0,0,0,.12), 0 0 0.125rem 0 rgba(0,0,0,.14);">
+<div class="container">
+<div class="py-5 small" style="">
+<p> Welcome! We use cookies and data about how you use our website allow us to improve the website and your experience, and resolve technical errors. Our website uses cookies and shares some of your data with third party analytics companies for these purposes. We do not use these cookies for advertising. </p>
+<p> If you decline, we will respect your privacy. A single cookie will be used in your browser to remember your preference. </p>
+<div class="row">
+<div class="col">
+<span class="diff-html-changed" changes="<ul class='changelist'><li><b>!diff-button!</b> removed with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:14GMT;<br/>path=/; secure; samesite=lax.</li><li><b>!diff-button!</b> added with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:15GMT;<br/>path=/; secure; samesite=lax.</li></ul>" previous="added-diff-32" changeId="changed-diff-6" next="last-diff" onclick="return tipC(constructToolTipC(this));"> </span><button type="button" class="btn btn-outline-light accept px-4 mr-2" data-cookie-string="OctopusConsent=yes; expires=Fri, 30 Oct 2020 21:37:15 GMT; path=/; secure; samesite=lax"><span class="diff-html-changed" id="changed-diff-6" changes="<ul class='changelist'><li><b>!diff-button!</b> removed with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:14GMT;<br/>path=/; secure; samesite=lax.</li><li><b>!diff-button!</b> added with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:15GMT;<br/>path=/; secure; samesite=lax.</li></ul>" previous="added-diff-32" changeId="changed-diff-6" next="last-diff" onclick="return tipC(constructToolTipC(this));">Accept</span></button><span class="diff-html-changed" changes="<ul class='changelist'><li><b>!diff-button!</b> removed with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:14GMT;<br/>path=/; secure; samesite=lax.</li><li><b>!diff-button!</b> added with type button,classbtn<br/>btn-outline-light accept px-4 mr-2anddata-cookie-string<br/>OctopusConsent=yes;expires=Fri,30Oct202021:37:15GMT;<br/>path=/; secure; samesite=lax.</li></ul>" previous="added-diff-32" changeId="changed-diff-6" next="last-diff" onclick="return tipC(constructToolTipC(this));"> </span><button type="button" class="btn btn-outline-light decline px-4" data-cookie-string="OctopusConsent=no; expires=Sat, 30 Nov 2019 00:00:00 GMT">Decline</button> 
+</div>
+<div class="col-auto"> 
+<a class="btn btn-link px-4 text-white" href="/privacy">Privacy policy</a> 
+</div>
+</div>
+</div>
+</div>
+</div>
+</main> 
+<footer id="footer" class="stripe stripe-dark d-print-none">
+<div class="container">
+<div class="row text-center text-md-left">
+<div class="col-lg-4 mb-4 text-center text-lg-left"> 
+<span class="octopus-logo"></span> <span class="octopus-logo-text">Octopus Deploy</span> 
+</div>
+<div class="col-6 col-lg-2 link-stack my-4 my-lg-0"> 
+<strong>Our company</strong> <a href="/company/about">About us</a> <a href="/company/careers">Careers &nbsp; <span class="chip chip-success" style="font-size: 12px">we're hiring!</span></a> <a href="/company/roadmap">Roadmap</a> <a href="/blog">Blog</a> <a href="https://shop.octopus.com">Swag</a> 
+</div>
+<div class="col-6 col-lg-2 link-stack my-4 my-lg-0"> 
+<strong>Integration</strong> <a href="/azure-devops">Azure DevOps/TFS</a> <a href="/teamcity">TeamCity</a> <a href="/jenkins">Jenkins</a> <a href="/bamboo">Bamboo</a> <a href="/docs/api-and-integration">REST API</a> 
+</div>
+<div class="col-6 col-lg-2 link-stack my-4 my-lg-0"> 
+<strong>Documentation</strong> <a href="/docs/getting-started">Getting started</a> <a href="/docs/packaging-applications">Packaging</a> <a href="/docs/deploying-applications">Deploying</a> <a href="/docs/deployment-examples/custom-scripts">Scripting</a> <a href="/docs/deployment-examples/sql-server-databases">Databases</a> 
+</div>
+<div class="col-6 col-lg-2 link-stack my-4 my-lg-0"> 
+<strong>Help &amp; Support</strong> <a href="/support" class="external">Contact us</a> <a href="https://help.octopus.com/" class="external">Problems</a> <a href="https://octopusdeploy.uservoice.com/" class="external">Suggestions</a> <a href="/videos">Videos</a> <a href="/upgrade">Upgrade license</a> 
+</div>
+</div> 
+<hr> 
+<div class="row footer-bottom-bar">
+<div class="col-md text-center text-md-left my-1"> 
+<a href="/privacy">Privacy policy</a> <a href="/gdpr">GDPR</a> <a href="/company/customer-agreement">Terms</a> 
+</div>
+<div class="col-md text-center text-md-left my-1"> 
+<span>Copyright &copy; 2019 Octopus Deploy</span> 
+</div>
+<div class="col-md  text-center text-md-right my-1"> 
+<a class="social-logo social-logo-twitter" href="https://twitter.com/OctopusDeploy" title="Twitter"></a> <a class="social-logo social-logo-linkedin" href="https://www.linkedin.com/company/octopus-deploy" title="LinkedIn"></a> <a class="social-logo social-logo-github" href="https://github.com/OctopusDeploy" title="GitHub"></a> <a class="social-logo social-logo-youtube" href="https://www.youtube.com/c/Octopusdeploy" title="YouTube"></a> 
+</div>
+</div>
+</div>
+</footer> 
+</body>
+</html>

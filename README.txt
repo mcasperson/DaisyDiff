@@ -1,3 +1,6 @@
+This is a port of the Daisy Diff tool, originally released on Google Code. It has been ported to use
+Maven and had some small fixes applied. The original readme is shown below.
+
                               Daisy Diff 1.1
 
         This is Daisy Diff, the open source HTML diffing library!
